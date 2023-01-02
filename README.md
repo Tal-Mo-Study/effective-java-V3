@@ -23,3 +23,17 @@
 7.  [다 쓴 객체 참조를 해제하라](./chapter_01/item_07.md)
 8.  [finalizer와 cleaner 사용을 피하라](./chapter_01/item_08.md)
 9.  [try-finally 보다는 try-with-resources를 사용하라](./chapter_01/item_09.md)
+
+---
+
+## **3장. 모든 객체의 공통 메서드**
+
+> 2023-01-03 스터디
+
+12. [toString을 항상 재정의하라](./chapter_02/item_12.md)
+
+---
+
+## **4장. 클래스와 인터페이스**
+
+16. [public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라](./chapter_03/item_16.md)
