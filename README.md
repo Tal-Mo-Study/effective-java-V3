@@ -23,3 +23,5 @@
 7.  [다 쓴 객체 참조를 해제하라](./chapter_01/item_07.md)
 8.  [finalizer와 cleaner 사용을 피하라](./chapter_01/item_08.md)
 9.  [try-finally 보다는 try-with-resources를 사용하라](./chapter_01/item_09.md)
+11. [equals를 재정의하려거든 hashCode도 재정의하라](./chapter_02/item_11.md)
+15. [클래스와 멤버의 접근 권한을 최소화 해라](./chapter_02/item_15.md)
