@@ -75,7 +75,7 @@ public String toString(){...};
 
 </br>
 
-## 포멧 명시에 상관없이 toString이 반환한 갑3ㅅ에 포함된 정보를 얻어 올 수 있는 API를 제공하자
+## 포멧 명시에 상관없이 toString이 반환한 값에 포함된 정보를 얻어 올 수 있는 API를 제공하자
 
 ---
 
