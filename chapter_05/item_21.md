@@ -1,16 +1,29 @@
 # 인터페이스는 구현하는 쪽을 생각해 설계하라
+자바8에서는 핵심 컬렉션 인터페이스들에 다수의 디폴트 메서드가 추가되었다. 
+주로 람다(7장참조)를 활용하기 위해서다. 자바 라이브러리의 디폴트 메서드는 코드 품질이 높고 범용적이라 대부분 상황에서 잘 작동한다. 
+하지만 생각할수있는 모든 상황에서 불변식을 해치지 않는 디폴트 메서드를 작성하기란 어려운법이다.
 
-인터페이스의 디폴트 함수를 쓰는것은 어렵다.
-생각할 수 있는 모든 상황에서 불변식을 해치지 않는 디폴트 메서드를 작성하기 어렵다.
 
-디폴트 메서드는 (컴파일이 성공하더라도) 기존 구현체에 런타임 오류를 일으킬 수 있다.
-
-인터페이스를 설계할때는 여전히 세심한 주의를 기울인다.
-
+인터페이스를 설계할때는 세심한 주의를 기울인다.
 ** 인터페이스는 마치 API와 같이 생각해야한다. 변경이 필요할때 마음대로 변경을 진행하면 안되며, 해당 인터페이스를 구현하거나 사용한 class도 고려해야 한다.**
 
-
+아래 코드는 디폴트 메서드가(컴파일이 성공하더라도) 기존 구현체에 런타임 오류를 일으키는 예제다.
 apache.commons.collections4.collection.SynchronizedCollection.java 의 코드
+
+~~~java
+// desc : 자바8의 Collection 인터페이스에 추가된 디폴트 메서드
+default boolean removeIf(Predicate<? super E> filter) { 
+    Obiects.requireNonNull(filter);
+    boolean result = false;
+    for (Iterator<E> it = iterator(); it.hasNext(); ){
+        if(filter.test(it.next())) {
+            it.remove();
+            result=true;
+        }
+    }
+    return result; 
+}
+~~~
 ~~~java
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
