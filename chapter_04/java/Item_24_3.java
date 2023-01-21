@@ -10,7 +10,11 @@ public class Item_24_3 {
             }
         };
 
+        human.walk();
+
         Animal dog = () -> System.out.println("네발로 걷는다.");
+
+        dog.walk();
     }
 
 }
