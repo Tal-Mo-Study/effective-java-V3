@@ -12,7 +12,6 @@ public class RunTests {
 
         for (Method m : testClass.getDeclaredMethods()) {
             if (m.isAnnotationPresent(Test.class)) {
-<<<<<<< HEAD
                 tests++; //4
                 try {
                     m.invoke(null);
@@ -22,17 +21,7 @@ public class RunTests {
                     System.out.println(m + " 실패: " + exc); // 2
                 } catch (Exception exc) {
                     System.out.println("잘못 사용한 @Test: " + m); // 1
-=======
-                tests++;
-                try {
-                    m.invoke(null);
-                    passed++;
-                } catch (InvocationTargetException wrappedExc) {
-                    Throwable exc = wrappedExc.getCause();
-                    System.out.println(m + " 실패: " + exc);
-                } catch (Exception exc) {
-                    System.out.println("잘못 사용한 @Test: " + m);
->>>>>>> origin/jbs
+
                 }
             }
         }

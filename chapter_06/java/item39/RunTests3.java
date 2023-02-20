@@ -8,11 +8,7 @@ public class RunTests3 {
     public static void main(String[] args) {
         int tests = 0;
         int passed = 0;
-<<<<<<< HEAD
         Class testClass = Sample3.class;
-=======
-        Class testClass = Sample2.class;
->>>>>>> origin/jbs
 
         for (Method m : testClass.getDeclaredMethods()) {
             if (m.isAnnotationPresent(RepeatableExceptionTest.class) || m.isAnnotationPresent(ExceptionTestContainer.class)) {
