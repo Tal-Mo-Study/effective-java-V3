@@ -2,7 +2,6 @@ package chapter_06.java.item39;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Sample2 {
     @ExceptionTest(ArithmeticException.class)
@@ -27,9 +26,5 @@ public class Sample2 {
 
         // 다음 메서드는 IndexOutOfBoundsException을 던짐
         list.addAll(5, null);
-    }
-
-    public static void main(String[] args) {
-        Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5);
     }
 }
